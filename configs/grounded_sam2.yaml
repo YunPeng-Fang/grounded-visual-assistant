@@ -1,6 +1,6 @@
 grounding:
   # Replace with a local directory on the offline server.
-  model_id: /data/fyp/models/grounding-dino-base
+  model_id: /data/models/grounding-dino-base
   box_threshold: 0.4
   text_threshold: 0.3
   # Disabled for the original baseline. Set to 0.5-0.7 for NMS ablations.
@@ -9,7 +9,7 @@ grounding:
 
 sam2:
   # SAM 2.1 Base+ is a good quality/speed starting point for an RTX 3090.
-  checkpoint: /data/fyp/models/sam2/sam2.1_hiera_base_plus.pt
+  checkpoint: /data/models/sam2/sam2.1_hiera_base_plus.pt
   model_config: configs/sam2.1/sam2.1_hiera_b+.yaml
 
 runtime:

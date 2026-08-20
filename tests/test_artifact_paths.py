@@ -24,7 +24,7 @@ class ArtifactPathsTest(unittest.TestCase):
 
     def test_linux_checkout_path_maps_to_synced_checkout(self) -> None:
         artifact = (
-            "/data/fyp/EngineeringProjects/grounded-visual-assistant/"
+            "/data/projects/grounded-visual-assistant/"
             "outputs/run/mask.jpg"
         )
         self.assertEqual(

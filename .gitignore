@@ -14,8 +14,10 @@ output/
 outputs/*
 !outputs/.gitkeep
 !outputs/answers/
+outputs/answers/*
 !outputs/answers/.gitkeep
 !outputs/logs/
+outputs/logs/*
 !outputs/logs/.gitkeep
 
 data/demo_images/*

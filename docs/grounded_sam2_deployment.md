@@ -28,9 +28,9 @@ Prepare these items on a machine with internet access and upload them to the
 server:
 
 ```text
-/data/fyp/EngineeringProjects/grounded-visual-assistant/third_party/Grounded-SAM-2/
-/data/fyp/models/grounding-dino-base/
-/data/fyp/models/sam2/sam2.1_hiera_base_plus.pt
+/data/projects/grounded-visual-assistant/third_party/Grounded-SAM-2/
+/data/models/grounding-dino-base/
+/data/models/sam2/sam2.1_hiera_base_plus.pt
 ```
 
 Official sources:
@@ -123,13 +123,13 @@ Check `configs/grounded_sam2.yaml`:
 
 ```yaml
 grounding:
-  model_id: /data/fyp/models/grounding-dino-base
+  model_id: /data/models/grounding-dino-base
   box_threshold: 0.4
   text_threshold: 0.3
   local_files_only: true
 
 sam2:
-  checkpoint: /data/fyp/models/sam2/sam2.1_hiera_base_plus.pt
+  checkpoint: /data/models/sam2/sam2.1_hiera_base_plus.pt
   model_config: configs/sam2.1/sam2.1_hiera_b+.yaml
 
 runtime:

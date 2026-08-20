@@ -6,7 +6,7 @@ model:
   # Recommended current VLM for this project. Use a local directory after manual
   # download on an offline server, for example:
   # /data/models/Qwen3-VL-8B-Instruct
-  model_id: /data/fyp/models/Qwen3-VL-8B-Instruct
+  model_id: /data/models/Qwen3-VL-8B-Instruct
   # Stable fallback if your environment does not support Qwen3-VL yet:
   # Qwen/Qwen2.5-VL-7B-Instruct
   # You can also replace this with a local model directory, for example:

@@ -1,9 +1,0 @@
-{
-  "image": "data/demo_images/test.jpg",
-  "question": "What objects are visible in this image?",
-  "answer": "Based on the image provided, the following objects are visible:\n\n- A small, light-colored puppy (appears to be cream or pale yellow) sitting on the grass.\n- Green grass covering the ground.\n- A blurry, dark object in the background on the right side, which appears to be a tree stump or a wooden post.\n- Watermarks with the text \"图行天下\" and \"PHOTOPHOTO.CN\" overlaid on the image.\n\nThe puppy is the central focus, and it is looking towards the camera with its mouth open and tongue out. The background is out of focus, creating a shallow depth of field.",
-  "model": "/data/fyp/models/Qwen3-VL-8B-Instruct",
-  "latency_seconds": 10.2625,
-  "device": "cuda:0",
-  "cuda_available": true
-}
