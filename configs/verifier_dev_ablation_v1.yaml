@@ -1,0 +1,54 @@
+protocol: verifier_dev_offline_ablation_v1
+
+inputs:
+  baseline_predictions: outputs/eval_verifier_dev_v1/qwen-baseline-dev110__qwen3-vl-8b-instruct/predictions.jsonl
+  grounding_run_dir: outputs/eval_verifier_dev_v1/grounding-dev57__grounding-dino-base__sam2.1-base-plus
+  semantic_run_dir: outputs/eval_verifier_dev_v1/semantic-review-dev23__qwen3-vl-8b-instruct
+
+candidate_universe:
+  # Stage 36 cached the lowest score once; all higher thresholds are offline.
+  score_thresholds: [0.30, 0.40, 0.45, 0.50]
+  min_mask_score: 0.50
+  min_mask_area_ratio: 0.0
+
+# Stable order is part of the policy-grid hash.
+policy_templates:
+  - family: v1-score-only
+    module: grounding
+    semantic_gate: false
+    max_mask_area_ratio: 1.0
+
+  - family: v1-score-plus-geometry
+    module: grounding
+    semantic_gate: false
+    max_mask_area_ratio: 0.90
+
+  - family: v2-semantic-no-geometry-top2
+    module: semantic
+    semantic_gate: true
+    max_mask_area_ratio: 1.0
+    max_candidates_per_query: 2
+
+  - family: v2-semantic-geometry-top1
+    module: semantic
+    semantic_gate: true
+    max_mask_area_ratio: 0.90
+    max_candidates_per_query: 1
+
+  - family: v2-semantic-geometry-top2
+    module: semantic
+    semantic_gate: true
+    max_mask_area_ratio: 0.90
+    max_candidates_per_query: 2
+
+selection:
+  primary_metric: accuracy
+  require_strict_accuracy_improvement: true
+  require_non_decreasing_f1: true
+  require_positive_net_corrections: true
+  fallback_policy: baseline
+  held_out_data_used_for_selection: false
+
+runtime:
+  output_dir: outputs/eval_verifier_dev_v1
+  run_name: offline-ablation-dev110__v1-v2

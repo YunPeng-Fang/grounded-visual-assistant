@@ -1,0 +1,15 @@
+protocol: verifier_dev_grounding_evidence_v1
+
+inputs:
+  baseline_predictions: outputs/eval_verifier_dev_v1/qwen-baseline-dev110__qwen3-vl-8b-instruct/predictions.jsonl
+
+grounding:
+  config: configs/grounded_sam2.yaml
+  # Cache the lowest pre-registered evidence threshold once. Higher-score
+  # ablations are derived offline from these candidates.
+  box_threshold: 0.30
+  text_threshold: 0.30
+  nms_iou_threshold: null
+
+runtime:
+  output_dir: outputs/eval_verifier_dev_v1

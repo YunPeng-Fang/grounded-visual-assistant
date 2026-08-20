@@ -1,0 +1,24 @@
+protocol: verifier_dev_semantic_review_v1
+
+inputs:
+  baseline_predictions: outputs/eval_verifier_dev_v1/qwen-baseline-dev110__qwen3-vl-8b-instruct/predictions.jsonl
+  grounding_run_dir: outputs/eval_verifier_dev_v1/grounding-dev57__grounding-dino-base__sam2.1-base-plus
+
+candidate_union:
+  evidence_score_threshold: 0.30
+  min_mask_score: 0.50
+  min_mask_area_ratio: 0.0
+  # Keep the complete candidate union; 0.90 is applied in offline ablations.
+  max_mask_area_ratio: 1.0
+  max_candidates_per_query: 2
+  crop_padding_ratio: 0.25
+  min_crop_size: 160
+  require_exact_semantic_answer: true
+
+semantic_model:
+  config: configs/default.yaml
+  max_new_tokens: 4
+  do_sample: false
+
+runtime:
+  output_dir: outputs/eval_verifier_dev_v1

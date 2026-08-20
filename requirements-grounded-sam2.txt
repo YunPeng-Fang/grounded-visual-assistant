@@ -1,0 +1,6 @@
+# Install the official Grounded-SAM-2 repository in editable mode separately.
+# PyTorch is intentionally excluded to preserve the verified cu124 environment.
+hydra-core>=1.3.2,<2
+iopath>=0.1.10
+omegaconf>=2.3.0,<3
+pycocotools>=2.0.8

@@ -1,0 +1,33 @@
+{
+  "artifact_sha256": {
+    "candidates.jsonl": "e10573ebd21201bb184e80e4c9d30b917de883241bc08aa617a8d932a46d6031",
+    "images.jsonl": "1eb5bcbcd1a064f4b624e8380851ff14d7734a6fb34ba65b3129a22b8c3efea8",
+    "splits/dev_sample_ids.json": "3205226d8235ef81c940472b13d9b42b8997916c3dfc30125e705e4ddea69280",
+    "splits/test_sample_ids.json": "68999fe20ef7f86237716737769a3a8721c3c0fea38e790a72c8c9cae20dee8d"
+  },
+  "immutable": true,
+  "input_sha256": {
+    "accepted_ids": "fb7341ab318730bb67e7b83c26cced6ebbf448535c1c92cb0acec6f3c9ecd76d",
+    "audit_summary": "9733b8e90dcce58f3c467ea6ec0ad62a0c425ea3b1e2a4f1f98250c71402058f",
+    "candidate_manifest": "1a3b4722008a8a1633336e42700322af405a427008d8797f7d741bf2a302a366",
+    "candidates": "c3e8988cf7f54568785a95e58612437b760ce389c0bb84793f6e6b5bd554d319",
+    "dev_ids": "e7d24fdf49fba3abed48afb848b2a5e98e0e43cfdea757dfc9b7dbb6ee43e178",
+    "downloads": "51934e6de62b74893cfe1ac72eac74ed439e0438decc1bd3a66f316af73e007a",
+    "excluded_ids": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_ids": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "statuses": "4cd6770f6686dd76a09dfc732fb0ad1dad690922cde3de58d63833c48d7031e4",
+    "test_ids": "9d7552f3de7815cd7fa1ff4b721f7a60188a6a178c7cc5bb3db09316f28b1079"
+  },
+  "name": "cross_dataset_hard_v1_frozen",
+  "pixel_set_sha256": "8ce50d0674d9766c25e8c3135b37fdcd24ed85da334339e9590c348d8712e784",
+  "samples": 400,
+  "schema_version": 1,
+  "source_counts": {
+    "open_images_v7_validation": 200,
+    "visual_genome_v1_4": 200
+  },
+  "split_counts": {
+    "dev": 200,
+    "test": 200
+  }
+}

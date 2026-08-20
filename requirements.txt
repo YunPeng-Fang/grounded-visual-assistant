@@ -1,0 +1,13 @@
+# Install requirements-torch-cu124.txt first on the RTX 3090 server.
+# PyTorch is intentionally excluded here to prevent an incompatible CUDA upgrade.
+accelerate>=0.34.0
+hf_xet>=1.1.0
+huggingface_hub>=0.35.0
+numpy==1.26.4
+opencv-python>=4.9.0
+pillow>=10.0.0
+pyyaml>=6.0.0
+qwen-vl-utils>=0.0.14
+tqdm>=4.66.0
+# Exact version recorded by the completed Hard-Dev400 Qwen3-VL run.
+transformers==5.13.1

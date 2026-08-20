@@ -1,0 +1,27 @@
+{
+  "acceptance_criteria": {
+    "balanced_accuracy_min": 0.508782,
+    "comparison_scope": "visual_genome_dev_100_paired_against_v1_and_v2",
+    "exact_accuracy_min": 0.58,
+    "hit_max_new_tokens_max": 0,
+    "parse_valid_rate_min": 0.98
+  },
+  "artifact_sha256": {
+    "dev_questions.jsonl": "e501e7e5409fb68d83099869a176f273e115ed63ed6dd518229bf4379077d91d"
+  },
+  "design_evidence": "Visual Genome uses explicit human relationship annotations, while the center-based prompt v2 was designed for Open Images geometry. Only Hard-Dev v1 and v2 results informed this design; Hard-Test questions and predictions were not inspected.",
+  "immutable": true,
+  "input_sha256": {
+    "dev_questions_v1": "8c0f39721373ec3ec1e9e4f200425e2695dde9b3f6f5cb0982d89223ae9b59f4",
+    "questions_v1_manifest": "4729b5c7a255632eeb9c6ce054b92c34a1cab0f516796eea933a43d6c0ca7a10"
+  },
+  "name": "cross_dataset_hard_dev_vg_relation_prompt_v3",
+  "prompt_version": "visual_genome_semantic_forced_choice_v3",
+  "questions": 100,
+  "schema_version": 1,
+  "source": "visual_genome_v1_4",
+  "split": "dev",
+  "task_counts": {
+    "spatial_relation": 100
+  }
+}

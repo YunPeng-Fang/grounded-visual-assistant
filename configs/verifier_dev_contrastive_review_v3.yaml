@@ -1,0 +1,35 @@
+protocol: verifier_dev_contrastive_review_v3
+
+inputs:
+  baseline_predictions: outputs/eval_verifier_dev_v1/qwen-baseline-dev110__qwen3-vl-8b-instruct/predictions.jsonl
+  grounding_run_dir: outputs/eval_verifier_dev_v1/grounding-dev57__grounding-dino-base__sam2.1-base-plus
+  semantic_run_dir: outputs/eval_verifier_dev_v1/semantic-review-dev23__qwen3-vl-8b-instruct
+  ontology: configs/coco_80_supercategories_v1.yaml
+
+v2_cascade:
+  evidence_score_threshold: 0.30
+  min_mask_score: 0.50
+  min_mask_area_ratio: 0.0
+  max_mask_area_ratio: 0.90
+  max_candidates_per_query: 1
+  require_exact_v2_yes: true
+
+contrastive_review:
+  none_label: none
+  marker_color: [255, 0, 0]
+  marker_width: 4
+  require_exact_label: true
+
+semantic_model:
+  config: configs/default.yaml
+  max_new_tokens: 8
+  do_sample: false
+
+selection:
+  require_strict_accuracy_improvement: true
+  require_non_decreasing_f1: true
+  require_positive_net_corrections: true
+  held_out_data_used_for_selection: false
+
+runtime:
+  output_dir: outputs/eval_verifier_dev_v3

@@ -1,0 +1,51 @@
+{
+  "protocol": "official_coco_pope_selective_download_v1",
+  "source": "https://github.com/RUCAIBox/POPE",
+  "revision": "main",
+  "image_transport": "http",
+  "metadata_urls": {
+    "random": "https://raw.githubusercontent.com/RUCAIBox/POPE/main/output/coco/coco_pope_random.json",
+    "popular": "https://raw.githubusercontent.com/RUCAIBox/POPE/main/output/coco/coco_pope_popular.json",
+    "adversarial": "https://raw.githubusercontent.com/RUCAIBox/POPE/main/output/coco/coco_pope_adversarial.json"
+  },
+  "metadata_sha256": {
+    "random": "ac25245170b975a5bdf9080b23fd431dfe6be458bc038259c1f4f09a6bef7994",
+    "popular": "72c1a8ad45d0c13514f5f22598261df41d3b533854d29682e924db50ed8aa753",
+    "adversarial": "420b3407db1fa9f1187a805dca41cb7b97fd91504e6c2179706188c107fb8ef8"
+  },
+  "artifact_sha256": {
+    "image_audit.jsonl": "13c2831c255e792707280a09dc73c30b5785c5bbe791bced9962ee6dbfd398bd",
+    "image_manifest.jsonl": "6de5ac78b325e5ce076e4908bb51a4a3ec99856fa009e12748746f9b32c0e0e0",
+    "questions.jsonl": "39a67ebf64d221a4d8159f86d1fa668d734a64e898c109e4bd76badfaf984d75"
+  },
+  "statistics": {
+    "questions": 9000,
+    "images": 500,
+    "per_strategy": {
+      "random": {
+        "questions": 3000,
+        "images": 500,
+        "yes": 1500,
+        "no": 1500
+      },
+      "popular": {
+        "questions": 3000,
+        "images": 500,
+        "yes": 1500,
+        "no": 1500
+      },
+      "adversarial": {
+        "questions": 3000,
+        "images": 500,
+        "yes": 1500,
+        "no": 1500
+      }
+    }
+  },
+  "image_download": {
+    "expected": 500,
+    "validated_this_run": 500,
+    "errors": 0,
+    "complete": true
+  }
+}

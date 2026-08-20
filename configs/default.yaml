@@ -1,0 +1,30 @@
+project:
+  name: grounded-visual-assistant
+  stage: vlm-baseline
+
+model:
+  # Recommended current VLM for this project. Use a local directory after manual
+  # download on an offline server, for example:
+  # /data/models/Qwen3-VL-8B-Instruct
+  model_id: /data/fyp/models/Qwen3-VL-8B-Instruct
+  # Stable fallback if your environment does not support Qwen3-VL yet:
+  # Qwen/Qwen2.5-VL-7B-Instruct
+  # You can also replace this with a local model directory, for example:
+  # /data/models/Qwen2.5-VL-7B-Instruct
+  # RTX 3090 is safest with float16. Avoid bfloat16 unless your GPU/runtime
+  # stack supports it well.
+  torch_dtype: float16
+  device_map: cuda
+  max_new_tokens: 256
+  # Deterministic decoding is required for comparable evaluation runs.
+  do_sample: false
+  # Set true after the model is downloaded to guarantee fully local loading.
+  local_files_only: true
+
+runtime:
+  output_dir: outputs/answers
+  eval_output_dir: outputs/eval_v0
+  log_dir: outputs/logs
+
+prompts:
+  default_question: Describe this image in detail.

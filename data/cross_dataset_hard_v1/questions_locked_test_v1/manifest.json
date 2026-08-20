@@ -1,0 +1,33 @@
+{
+  "artifact_sha256": {
+    "test_questions.jsonl": "aad51b49121f3e59a388158c0d42c2e85a085f9fa4b570b41a142d219c779e6e"
+  },
+  "changed_relation_questions": 200,
+  "evaluation_protocol": "single_complete_held_out_run_no_partial_test_evaluation",
+  "immutable": true,
+  "input_sha256": {
+    "questions_v1_manifest": "4729b5c7a255632eeb9c6ce054b92c34a1cab0f516796eea933a43d6c0ca7a10",
+    "selected_policy": "21243f009a26e00e3d8ff2b0feeda606d4462ce39cb4b67657d9875e19ed322f",
+    "test_questions_v1": "937963570edb662222f6ccc600483385fdedf5fe0d36c0302e7de5265d32e9a6"
+  },
+  "name": "cross_dataset_hard_locked_test_questions_v1",
+  "policy": {
+    "open_images_prompt": "relation_center_forced_choice_v2",
+    "protocol": "hard_relation_source_aware_prompt_policy_v1",
+    "selected_on_split": "dev",
+    "visual_genome_prompt": "visual_genome_semantic_forced_choice_v3"
+  },
+  "questions": 400,
+  "schema_version": 1,
+  "sources": {
+    "open_images_v7_validation": 300,
+    "visual_genome_v1_4": 100
+  },
+  "split": "test",
+  "task_counts": {
+    "object_existence": 100,
+    "object_listing": 100,
+    "spatial_relation": 200
+  },
+  "test_prediction_status": "not_run"
+}

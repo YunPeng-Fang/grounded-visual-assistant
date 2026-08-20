@@ -1,0 +1,25 @@
+protocol: live_prompt_policy_selection_v1
+split: dev
+sample_count: 60
+
+baseline:
+  prompt_policy: generic-v1
+  run_dir: outputs/eval_live_pipeline_v0/dev__live-answer-grounding-v1__qwen3-vl-8b-instruct__box-0.30__text-0.30
+  predictions_sha256: f451fd1e93405bf699f8d5399e9b63dd8e11d8ea0e9ac26a51a1f704b587f168
+  metrics_sha256: 58bf43bcb1e500a04d5ff1dcdb1fc1ee6765d8adb5f705b746c7f80e3fa53285
+
+candidate:
+  prompt_policy: task-aware-coco-v1
+  run_dir: outputs/eval_live_pipeline_v0/dev__live-answer-grounding-v1__qwen3-vl-8b-instruct__box-0.30__text-0.30__task-aware-coco-v1
+
+acceptance:
+  schema_valid_rate_min: 0.98
+  relation_parse_valid_rate_min: 0.95
+  relation_exact_accuracy_min: 0.35
+  listing_macro_f1_min: 0.634762
+  existence_exact_accuracy_min: 0.90
+  target_micro_f1_min: 0.706827
+  box_micro_f1_min: 0.421286
+  mask_micro_f1_min: 0.416851
+  end_to_end_any_success_rate_min: 0.483333
+  end_to_end_complete_success_rate_min: 0.383333

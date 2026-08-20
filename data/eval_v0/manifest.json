@@ -1,0 +1,21 @@
+{
+  "name": "eval_v0",
+  "source": "COCO val2017",
+  "seed": 2026,
+  "num_images": 100,
+  "num_questions": 300,
+  "questions_per_image": 3,
+  "task_counts": {
+    "object_listing": 100,
+    "object_existence": 100,
+    "spatial_relation": 100
+  },
+  "existence_balance": {
+    "yes": 50,
+    "no": 50
+  },
+  "generation": {
+    "min_area_ratio": 0.005,
+    "relation_margin": 0.08
+  }
+}

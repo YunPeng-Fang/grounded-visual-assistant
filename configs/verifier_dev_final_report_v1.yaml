@@ -1,0 +1,24 @@
+protocol: verifier_dev_final_freeze_v1
+
+inputs:
+  baseline_predictions: outputs/eval_verifier_dev_v1/qwen-baseline-dev110__qwen3-vl-8b-instruct/predictions.jsonl
+  grounding_evidence: outputs/eval_verifier_dev_v1/grounding-dev57__grounding-dino-base__sam2.1-base-plus/evidence.jsonl
+  semantic_reviews: outputs/eval_verifier_dev_v1/semantic-review-dev23__qwen3-vl-8b-instruct/semantic_reviews.jsonl
+  stage38_run_dir: outputs/eval_verifier_dev_v1/offline-ablation-dev110__v1-v2
+  stage39_run_dir: outputs/eval_verifier_dev_v3/contrastive-review-dev3__qwen3-vl-8b-instruct
+
+representative_variants:
+  v1_best_policy_id: v1-score-only__score-0p50
+  v2_rescue_policy_id: v2-semantic-geometry-top1__score-0p30
+  v2_noop_policy_id: v2-semantic-geometry-top1__score-0p50
+
+final_policy:
+  policy_id: qwen-baseline-dev110
+  answer_rewrite_enabled: false
+  evidence_localization_enabled: true
+  evidence_usage: explanation_and_audit_only
+  held_out_verifier_run_permitted: false
+
+runtime:
+  output_dir: outputs/eval_verifier_final_v1
+  run_name: verifier-dev110-final

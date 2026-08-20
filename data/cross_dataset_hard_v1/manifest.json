@@ -1,0 +1,96 @@
+{
+  "name": "cross_dataset_hard_v1",
+  "schema_version": 1,
+  "seed": 2026,
+  "selection": {
+    "source_quotas": {
+      "open_images_v7_validation": 200,
+      "visual_genome_v1_4": 200
+    },
+    "dev_fraction": 0.5,
+    "difficulty_selection": "weighted_tags_with_diversity_bonus",
+    "split_singletons": "deterministic_balancing_without_test_bias",
+    "group_boxes_allowed_as_relation_endpoints": false
+  },
+  "exclusions": {
+    "coco_image_ids": 100,
+    "visual_genome_coco_overlap_removed": true,
+    "content_hash_dedup_pending_image_download": true
+  },
+  "statistics": {
+    "all": {
+      "samples": 400,
+      "sources": {
+        "open_images_v7_validation": 200,
+        "visual_genome_v1_4": 200
+      },
+      "categories": 827,
+      "difficulty_tags": {
+        "category_diversity": 279,
+        "dense_instances": 225,
+        "dense_relations": 41,
+        "group_of": 171,
+        "long_tail_category": 278,
+        "occluded": 200,
+        "repeated_category": 189,
+        "small_object": 42,
+        "spatial_relation": 400,
+        "tiny_object": 358,
+        "truncated": 193
+      },
+      "mean_difficulty_score": 8.56125
+    },
+    "dev": {
+      "samples": 200,
+      "sources": {
+        "open_images_v7_validation": 100,
+        "visual_genome_v1_4": 100
+      },
+      "categories": 549,
+      "difficulty_tags": {
+        "category_diversity": 137,
+        "dense_instances": 117,
+        "dense_relations": 23,
+        "group_of": 85,
+        "long_tail_category": 139,
+        "occluded": 100,
+        "repeated_category": 95,
+        "small_object": 22,
+        "spatial_relation": 200,
+        "tiny_object": 178,
+        "truncated": 98
+      },
+      "mean_difficulty_score": 8.5975
+    },
+    "test": {
+      "samples": 200,
+      "sources": {
+        "open_images_v7_validation": 100,
+        "visual_genome_v1_4": 100
+      },
+      "categories": 573,
+      "difficulty_tags": {
+        "category_diversity": 142,
+        "dense_instances": 108,
+        "dense_relations": 18,
+        "group_of": 86,
+        "long_tail_category": 139,
+        "occluded": 100,
+        "repeated_category": 94,
+        "small_object": 20,
+        "spatial_relation": 200,
+        "tiny_object": 180,
+        "truncated": 95
+      },
+      "mean_difficulty_score": 8.525
+    }
+  },
+  "input_sha256": {
+    "open_images_boxes": "d8bbd59410af14835d7733165a7bb8a3f0213981b22dd5077b0b9f7878991ff2",
+    "open_images_classes": "2fa47fb1b87e71c90b9fbee2dc1184eb8c59601bb811ea4424b200653cedff8e",
+    "visual_genome_relationships": "9a7d5f396bd9f1d150e6977c2896ca4feb6024068c6e4c51d571d385f5ab4e64",
+    "visual_genome_image_data": "93d0053d7e8f451497646fa513e8fb9b1a889df6e757010b88e51e2e21803487",
+    "excluded_questions": "8ea4e1dda3708247b3aac295d8be44e753614ec24768216111ba7ad6d95e690e"
+  },
+  "next_required_step": "Download only selected images, verify dimensions and licenses, then remove exact and perceptual duplicates before question generation."
+}

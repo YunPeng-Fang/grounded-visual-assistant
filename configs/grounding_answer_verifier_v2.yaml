@@ -1,0 +1,25 @@
+protocol: grounding_semantic_rescue_v2
+
+inputs:
+  baseline_predictions: outputs/eval_pope_v0/pope-full9000__qwen3-vl-8b-instruct/predictions.jsonl
+  grounding_run_dir: outputs/eval_pope_verifier_v1/pope-verifier-smoke90__positive-rescue-v1
+
+verification:
+  # Candidates below the locked existence evidence gate are not reviewed.
+  evidence_score_threshold: 0.30
+  min_mask_score: 0.50
+  min_mask_area_ratio: 0.0
+  # Near-full-frame masks are detector failures, not localized evidence.
+  max_mask_area_ratio: 0.90
+  max_candidates_per_query: 2
+  crop_padding_ratio: 0.25
+  min_crop_size: 160
+  require_exact_semantic_answer: true
+
+semantic_model:
+  config: configs/default.yaml
+  max_new_tokens: 4
+  do_sample: false
+
+runtime:
+  output_dir: outputs/eval_pope_verifier_v2

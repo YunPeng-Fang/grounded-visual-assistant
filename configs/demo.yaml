@@ -1,0 +1,15 @@
+project:
+  name: grounded-visual-assistant
+
+vlm:
+  config: configs/default.yaml
+  max_new_tokens: 192
+
+grounding:
+  config: configs/grounded_sam2.yaml
+  box_threshold: 0.30
+  text_threshold: 0.30
+  nms_iou_threshold: null
+
+runtime:
+  output_dir: outputs/demo/live

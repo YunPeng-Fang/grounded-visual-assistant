@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "source": "https://github.com/RUCAIBox/POPE",
+  "revision": "main",
+  "download_backend": "urllib",
+  "image_transport": "http",
+  "metadata_states": {
+    "random": "reused",
+    "popular": "reused",
+    "adversarial": "reused"
+  },
+  "questions": 9000,
+  "images": 500,
+  "per_strategy": {
+    "random": {
+      "questions": 3000,
+      "images": 500,
+      "yes": 1500,
+      "no": 1500
+    },
+    "popular": {
+      "questions": 3000,
+      "images": 500,
+      "yes": 1500,
+      "no": 1500
+    },
+    "adversarial": {
+      "questions": 3000,
+      "images": 500,
+      "yes": 1500,
+      "no": 1500
+    }
+  },
+  "images_selected_this_run": 500,
+  "images_validated_this_run": 500,
+  "image_errors": 0,
+  "metadata_only": false,
+  "audit_only": true
+}

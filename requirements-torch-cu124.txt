@@ -1,0 +1,5 @@
+--index-url https://download.pytorch.org/whl/cu124
+
+# Known-compatible pair for NVIDIA driver 550.135 (CUDA driver capability 12.4).
+torch==2.5.1
+torchvision==0.20.1

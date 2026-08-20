@@ -1,0 +1,28 @@
+protocol: live_prompt_policy_selection_v2
+split: dev
+sample_count: 60
+change_scope: object_listing_system_prompt_only
+comparison_output_dir: outputs/eval_live_pipeline_v0/prompt_policy_v1_vs_v2_dev
+
+baseline:
+  prompt_policy: task-aware-coco-v1
+  run_dir: outputs/eval_live_pipeline_v0/dev__live-answer-grounding-v1__qwen3-vl-8b-instruct__box-0.30__text-0.30__task-aware-coco-v1
+  predictions_sha256: c651c0cf2b84dbc0058ff4ed3b41674e3e58ed748b95ffd56ccf550db6cd9639
+  metrics_sha256: 2fe86c69bc169e279f26b8f1a457b5558ff7eaae168f0ff67ecf5f16376911d2
+
+candidate:
+  prompt_policy: task-aware-coco-v2
+  prompt_template_sha256: aab6d4d3ec4067e1953b4c8e4dd95e82f1d29b351cfa2787d6cff18a648a7375
+  run_dir: outputs/eval_live_pipeline_v0/dev__live-answer-grounding-v1__qwen3-vl-8b-instruct__box-0.30__text-0.30__task-aware-coco-v2
+
+acceptance:
+  schema_valid_rate_min: 0.98
+  relation_parse_valid_rate_min: 0.95
+  relation_exact_accuracy_min: 0.65
+  listing_macro_f1_min: 0.686811
+  existence_exact_accuracy_min: 0.90
+  target_micro_f1_min: 0.736303
+  box_micro_f1_min: 0.528673
+  mask_micro_f1_min: 0.519823
+  end_to_end_any_success_rate_min: 0.633333
+  end_to_end_complete_success_rate_min: 0.533333

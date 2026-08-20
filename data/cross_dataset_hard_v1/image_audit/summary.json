@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "downloaded": 124,
+  "reused": 276,
+  "download_errors": 0,
+  "reference_images": 100,
+  "near_threshold": 4,
+  "download_backend": "curl",
+  "duplicate_pairs": {
+    "exact": 0,
+    "near": 0,
+    "cross_split": 0
+  },
+  "samples": {
+    "samples": 400,
+    "status_counts": {
+      "accepted": 400
+    },
+    "source_counts": {
+      "open_images_v7_validation": 200,
+      "visual_genome_v1_4": 200
+    },
+    "split_counts": {
+      "dev": 200,
+      "test": 200
+    }
+  },
+  "accepted": 400,
+  "review": 0,
+  "excluded": 0,
+  "next_required_step": "Freeze the validated image manifest, then generate source-aware questions."
+}

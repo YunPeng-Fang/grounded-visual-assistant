@@ -1,0 +1,22 @@
+{
+  "artifact_sha256": {
+    "dev_questions.jsonl": "b542c3fc36e2e62385e4a4e4eed2c087e759f1e9d50a49afd760a444cc75c948"
+  },
+  "changed_relation_questions": 200,
+  "design_evidence": "Hard-Dev v1 relation refusals, parse failures, and broad-label absence claims; no Hard-Test predictions were inspected.",
+  "immutable": true,
+  "input_sha256": {
+    "dev_questions_v1": "8c0f39721373ec3ec1e9e4f200425e2695dde9b3f6f5cb0982d89223ae9b59f4",
+    "questions_v1_manifest": "4729b5c7a255632eeb9c6ce054b92c34a1cab0f516796eea933a43d6c0ca7a10"
+  },
+  "name": "cross_dataset_hard_dev_relation_prompt_v2",
+  "prompt_version": "relation_center_forced_choice_v2",
+  "questions": 400,
+  "schema_version": 1,
+  "split": "dev",
+  "task_counts": {
+    "object_existence": 100,
+    "object_listing": 100,
+    "spatial_relation": 200
+  }
+}

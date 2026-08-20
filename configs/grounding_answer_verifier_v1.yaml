@@ -1,0 +1,19 @@
+protocol: grounding_positive_rescue_v1
+
+grounding:
+  config: configs/grounded_sam2.yaml
+  # Keep all candidates needed by the evidence gate.
+  box_threshold: 0.30
+  text_threshold: 0.30
+  nms_iou_threshold: null
+
+verification:
+  # 0.30 reuses the locked Dev-selected existence evidence gate.
+  evidence_score_threshold: 0.30
+  # V1 uses a conservative threshold for changing No to Yes.
+  promotion_score_threshold: 0.45
+  min_mask_score: null
+  min_mask_area_ratio: 0.0
+
+runtime:
+  output_dir: outputs/grounding_answer_verifier_v1
